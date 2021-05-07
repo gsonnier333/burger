@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>🍔Burgers🍔</h1>
+    <h1>🍔Burgers!🍔</h1>
 
     <h2>Add a burger:</h2>
     <form id="addForm">
@@ -15,7 +15,7 @@
                 {{#each burgers}}
                 {{#unless devoured}}
                 <li>
-                    {{burger_name}}🍔
+                    🍔{{burger_name}}
                     <button id="{{id}}" class="eatBtn">Devour it!</button>
                 </li>
                 {{/unless}}
@@ -30,7 +30,7 @@
                 {{#each burgers}}
                 {{#if devoured }}
                 <li>
-                    {{burger_name}}🍔
+                    🍔{{burger_name}}
                 </li>
                 {{/if}}
                 {{/each}}
