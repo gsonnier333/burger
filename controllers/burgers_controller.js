@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
 		const handlebarsObj = {
 			burgers: data,
 		};
-		console.log(handlebarsObj);
+		//console.log(handlebarsObj);
 		res.render("index", handlebarsObj);
 	});
 });

@@ -1,8 +1,9 @@
 <h1>Burgers</h1>
 
 <h2>Add a burger:</h2>
-<form action="/api/burgers" aria-placeholder="Burger name">
-    <button id="addBurgerBtn">Add</button>
+<form id="addForm">
+    <input type="text" placeholder="Burger name" id="newBurgerName"></textarea>
+    <button type="submit">Add</button>
 </form>
 
 
@@ -13,7 +14,7 @@
     {{#unless devoured}}
     <li>
         {{burger_name}}
-        <button id="{{burger_name}}">Eat!</button>
+        <button id="{{id}}" class="eatBtn">Eat!</button>
     </li>
     {{/unless}}
     {{/each}}

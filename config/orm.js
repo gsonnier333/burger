@@ -7,8 +7,8 @@ function makeQuestionMarks(num) {
 		if (i < num - 1) {
 			result += ","; //add commas until our last question mark
 		}
-		return result;
 	}
+	return result;
 }
 
 // Helper function to convert object key/value pairs to SQL syntax
