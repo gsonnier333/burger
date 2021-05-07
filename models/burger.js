@@ -7,11 +7,12 @@ const burger = {
 	addBurger(cols, vals, callback) {
 		orm.insertOne("burgers", cols, vals, (res) => callback(res));
 	},
-	eatBurger(burger) {
+	eatBurger(burger, condition, callback) {
 		orm.updateOne(
 			"burgers",
 			{ devoured: true },
-			`burger_name="${burger.name}"`
+			`id="${burger.id}"`,
+			(res) => callback(res)
 		);
 	},
 };

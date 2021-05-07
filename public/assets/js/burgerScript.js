@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 					},
 
 					// make sure to serialize the JSON body
-					body: JSON.stringify({ devoured: true }),
+					body: JSON.stringify({ id: id, devoured: true }),
 				}).then((response) => {
 					// Check that the response is all good
 					// Reload the page so the user can see the updated lists
