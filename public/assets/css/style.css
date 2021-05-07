@@ -1,0 +1,5 @@
+.burgerList {
+	display: flex;
+	outline: black solid 1px;
+	margin-top: 5%;
+}

@@ -1,34 +1,42 @@
-<h1>Burgers</h1>
+<div class="container">
+    <h1>🍔Burgers🍔</h1>
 
-<h2>Add a burger:</h2>
-<form id="addForm">
-    <input type="text" placeholder="Burger name" id="newBurgerName"></textarea>
-    <button type="submit">Add</button>
-</form>
+    <h2>Add a burger:</h2>
+    <form id="addForm">
+        <input type="text" placeholder="Burger name" id="newBurgerName"></textarea>
+        <button type="submit">Add</button>
+    </form>
 
 
+    <div class="row burgerList">
+        <div class="col">
+            <h2>Uneaten burgers:</h2>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>
+                    {{burger_name}}🍔
+                    <button id="{{id}}" class="eatBtn">Devour it!</button>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
 
-<h2>Uneaten burgers:</h2>
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-        {{burger_name}}
-        <button id="{{id}}" class="eatBtn">Eat!</button>
-    </li>
-    {{/unless}}
-    {{/each}}
-</ul>
 
-<h2>Devoured burgers:</h2>
-<ul>
-    {{#each burgers}}
-    {{#if devoured }}
-    <li>
-        {{burger_name}}
-    </li>
-    {{/if}}
-    {{/each}}
-</ul>
+        <div class="col">
+            <h2>Devoured burgers:</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured }}
+                <li>
+                    {{burger_name}}🍔
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
 
-<p>🍔</p>
+
+</div>
