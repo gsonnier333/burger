@@ -8,7 +8,7 @@ const connection = mysql.createPool({
 	database: process.env.DB,
 });
 
-connection.connect((err) => {
+connection.getConnection((err, pool) => {
 	if (err) {
 		console.error(`error connecting: ${err.stack}`);
 		return;
