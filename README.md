@@ -1,6 +1,6 @@
 # Burger Devourer
 
-![Screenshot of deployed site](public/assets/img/burgers-screenshot.png)
+![Screenshot of deployed site](public/assets/img/burgers-screenshot.PNG)
 
 Deployed to heroku at: https://burger-devourer-gfs.herokuapp.com/
 
